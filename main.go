@@ -20,9 +20,10 @@ type Produto struct {
 var temp = template.Must(template.ParseGlob("templates/*.html"))
 
 func main() {
-	fmt.Println("Server: http://localhost:8000")
+	Port := os.Getenv("PORT")
+	fmt.Println("Server: http://localhost:" + Port)
 	http.HandleFunc("/", index)
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":"+Port, nil)
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
