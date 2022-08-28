@@ -12,6 +12,6 @@ import (
 func main() {
 	Port := os.Getenv("PORT")
 	fmt.Println("Server: http://localhost:" + Port)
-	routes.CarregaRotas();
+	routes.CarregaRotas()
 	http.ListenAndServe(":"+Port, nil)
 }
