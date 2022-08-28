@@ -1,1 +1,1 @@
-web: golang_heroku
+web: bin/Alura-AppWeb_go
